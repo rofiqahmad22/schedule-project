@@ -1,5 +1,6 @@
 const dayItems = [
   {
+    id: 1,
     name: "sunday",
     activity: [
       "pray",
@@ -18,6 +19,7 @@ const dayItems = [
     ],
   },
   {
+    id: 2,
     name: "monday",
     activity: [
       "pray",
@@ -36,6 +38,7 @@ const dayItems = [
     ],
   },
   {
+    id: 3,
     name: "tuesday",
     activity: [
       "pray",
@@ -53,6 +56,7 @@ const dayItems = [
     ],
   },
   {
+    id: 4,
     name: "wednesday",
     activity: [
       "pray",
@@ -71,6 +75,7 @@ const dayItems = [
     ],
   },
   {
+    id: 5,
     name: "thursday",
     activity: [
       "pray",
@@ -89,6 +94,7 @@ const dayItems = [
     ],
   },
   {
+    id: 6,
     name: "friday",
     activity: [
       "pray",
@@ -107,6 +113,7 @@ const dayItems = [
     ],
   },
   {
+    id: 7,
     name: "saturday",
     activity: [
       "pray",
@@ -126,4 +133,8 @@ const dayItems = [
   },
 ];
 
-console.log(dayItems);
+const day = dayItems.find((day) => {
+  return day.id == 3;
+});
+
+console.log({ day });
