@@ -13,6 +13,8 @@ const dataDayItems = [
       "dinner",
       "pray",
       "playingMobilePhone",
+      "dinner",
+      "dinner",
       "sleep",
     ],
   },
@@ -124,19 +126,10 @@ const dataDayItems = [
   },
 ];
 
-// console.log(dataDayItems);
-
-// const day = dataDayItems.find((day) => {
-//   return day.id == 3;
-// });
-
-// console.log({ day });
-
-function findBusiestDay(days) {
+function findBusiestDays(days) {
   const activitiesCountItems = days.map((day) => {
     return day.activities.length;
   });
-  console.log(activitiesCountItems);
 
   let largest = 0;
   let largestItems = [];
@@ -155,7 +148,20 @@ function findBusiestDay(days) {
     }
   });
 
-  console.log({ largest, largestItems });
+  const busiestDays = largestItems.map((day, index) => {
+    const dayIndexToFind = largestItems[index]; // Get the day indexes
+    return dataDayItems[dayIndexToFind]; // Get the actual days
+  });
+
+  return busiestDays;
 }
 
-console.log(findBusiestDay(dataDayItems));
+const busiestDaysResult = findBusiestDays(dataDayItems);
+
+const busiestDaysNamesArray = busiestDaysResult.map((busiestDay) => {
+  return busiestDay.name;
+});
+
+const busiestDaysString = busiestDaysNamesArray.join(", ");
+
+console.log(`The busiest days are on ${busiestDaysString}.`);

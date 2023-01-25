@@ -14,8 +14,9 @@ Can be more than one day.
    - [13, 10, 20...]
 3. Find the highest value/number in that new array. Can be more than one value.
    - Save the indexes = wednesday & friday = index 3 & 5
-4. Get the day object with that index
-   - array[5]
+4. Get and save the day objects with that indexes
+   - array[3] & array[5]
      -> Friday is the busiest day
+5. Display all the busiest days
 
 ### Kegiatan apa yang paling banyak dilakukan pada hari itu?
