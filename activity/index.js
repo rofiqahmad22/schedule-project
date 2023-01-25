@@ -137,6 +137,25 @@ function findBusiestDay(days) {
     return day.activities.length;
   });
   console.log(activitiesCountItems);
+
+  let largest = 0;
+  let largestItems = [];
+
+  // Get the largest value first
+  activitiesCountItems.forEach((activitiesCount) => {
+    if (activitiesCount > largest) {
+      largest = activitiesCount;
+    }
+  });
+
+  // Collect the largest values compared to the largest value
+  activitiesCountItems.forEach((activitiesCount, index) => {
+    if (activitiesCount >= largest) {
+      largestItems.push(index);
+    }
+  });
+
+  console.log({ largest, largestItems });
 }
 
 console.log(findBusiestDay(dataDayItems));
