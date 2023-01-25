@@ -133,6 +133,8 @@ const dayItems = [
   },
 ];
 
+console.log(dayItems);
+
 const day = dayItems.find((day) => {
   return day.id == 3;
 });
