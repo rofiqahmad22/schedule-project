@@ -156,12 +156,15 @@ function findBusiestDays(days) {
   return busiestDays;
 }
 
+function displayBusiestDays(busiestDaysResult) {
+  const busiestDaysNamesArray = busiestDaysResult.map((busiestDay) => {
+    return busiestDay.name;
+  });
+
+  const busiestDaysString = busiestDaysNamesArray.join(", ");
+
+  console.log(`The busiest days are on ${busiestDaysString}.`);
+}
+
 const busiestDaysResult = findBusiestDays(dataDayItems);
-
-const busiestDaysNamesArray = busiestDaysResult.map((busiestDay) => {
-  return busiestDay.name;
-});
-
-const busiestDaysString = busiestDaysNamesArray.join(", ");
-
-console.log(`The busiest days are on ${busiestDaysString}.`);
+displayBusiestDays(busiestDaysResult);
