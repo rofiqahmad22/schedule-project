@@ -1,11 +1,9 @@
-const dayItems = [
+const dataDayItems = [
   {
     id: 1,
     name: "sunday",
     activities: [
       "pray",
-      "cleanBedroom",
-      "breakfast",
       "playingLaptop",
       "pray",
       "readReference",
@@ -24,7 +22,6 @@ const dayItems = [
     activities: [
       "pray",
       "celanBedroom",
-      "breakfast",
       "playingLaptop",
       "pray",
       "sleep",
@@ -47,10 +44,8 @@ const dayItems = [
       "pray",
       "doingExercise",
       "pray",
-      "playingMobilePhone",
       "pray",
       "dinner",
-      "playingMobilePhone",
       "pray",
       "sleep",
     ],
@@ -85,11 +80,9 @@ const dayItems = [
       "pray",
       "watchingMovie",
       "pray",
-      "playingMobilePhone",
       "pray",
       "dinner",
       "pray",
-      "playingMobilePhone",
       "sleep",
     ],
   },
@@ -121,22 +114,29 @@ const dayItems = [
       "breakfast",
       "playingLaptop",
       "pray",
-      "sleep",
       "pray",
       "pray",
       "dinner",
       "readReference",
       "doingExercises",
       "pray",
-      "sleep",
     ],
   },
 ];
 
-console.log(dayItems);
+// console.log(dataDayItems);
 
-const day = dayItems.find((day) => {
-  return day.id == 3;
-});
+// const day = dataDayItems.find((day) => {
+//   return day.id == 3;
+// });
 
-console.log({ day });
+// console.log({ day });
+
+function findBusiestDay(days) {
+  const activitiesCountItems = days.map((day) => {
+    return day.activities.length;
+  });
+  console.log(activitiesCountItems);
+}
+
+console.log(findBusiestDay(dataDayItems));
